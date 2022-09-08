@@ -81,7 +81,7 @@ class ConcreteCreator2 extends Creator {
   }
 }
 
-function clientCode(creator: Creator) {
+function clientCode1(creator: Creator) {
   console.log(
     "Client: I'm not aware of the creator's class, but it still works."
   );
@@ -90,7 +90,7 @@ function clientCode(creator: Creator) {
 
 console.log("App: Launched with the ConcreteCreator1.");
 // App: Launched with the ConcreteCreator1.
-clientCode(new ConcreteCreator1());
+clientCode1(new ConcreteCreator1());
 // Client: I'm not aware of the creator's class, but it still works.
 // Creator: The same creator's code has just worked with {Result of the ConcreteProduct1}
 
@@ -102,6 +102,6 @@ console.log("");
 // 例如，如果需要向应用中添加一种新产品，你只需要开发新的创建者子类，然后重写其工厂方法即可。
 console.log("App: Launched with the ConcreteCreator2.");
 // App: Launched with the ConcreteCreator2.
-clientCode(new ConcreteCreator2());
+clientCode1(new ConcreteCreator2());
 // Client: I'm not aware of the creator's class, but it still works.
 // Creator: The same creator's code has just worked with {Result of the ConcreteProduct2}

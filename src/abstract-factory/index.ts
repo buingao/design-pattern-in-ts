@@ -86,7 +86,7 @@ class ConcreteFactory2 implements AbstractFactory {
 /**
  * 客户端代码仅通过其抽象接口与工厂和产品进行交互。 该接口允许同一客户端代码与不同产品进行交互。
  */
-function clientCode(factory: AbstractFactory) {
+function clientCode2(factory: AbstractFactory) {
   const productA = factory.createProductA();
   const productB = factory.createProductB();
 
@@ -96,7 +96,7 @@ function clientCode(factory: AbstractFactory) {
 
 console.log("Client: Testing client code with the first factory type...");
 // 由工厂1生产
-clientCode(new ConcreteFactory1());
+clientCode2(new ConcreteFactory1());
 
 console.log("");
 
@@ -104,7 +104,7 @@ console.log(
   "Client: Testing the same client code with the second factory type..."
 );
 // 由工厂2生产
-clientCode(new ConcreteFactory2());
+clientCode2(new ConcreteFactory2());
 
 // Client: Testing client code with the first factory type...
 // The result of the product b1.
